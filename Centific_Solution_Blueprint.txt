@@ -1,0 +1,68 @@
+====================================================================
+CENTIFIC PREMIER HACKATHON 2.0 - CASE STUDY SOLUTION BLUEPRINT
+Omni-Channel Pharmacy Operations Web Platform
+====================================================================
+
+1. EXECUTIVE SUMMARY & ARCHITECTURE
+--------------------------------------------------------------------
+This blueprint outlines the architecture for a responsive, mobile-compatible microservices-based web application serving a healthcare retail group with 180 pharmacy outlets. The solution embraces a modern decoupled architecture:
+
+- Frontend: React (Vite) + Zustand for state management, Vanilla CSS with CSS Modules for performance and responsive design, supporting low-bandwidth connections via optimized bundling and asset caching.
+- Backend Core: Python (FastAPI) for microservices allowing asynchronous non-blocking I/O, which is highly performant and scalable.
+- Database: PostgreSQL (Relational consistency) with AsyncPG drivers for asynchronous database interaction.
+- Inter-Service Communication & Background Jobs: Redis + Celery implementation for decoupled business logic and task queueing (e.g., forecasting, email alerts).
+
+The Microservices Boundaries:
+1. Auth Service: JWT-based stateless authentication, RBAC authorization, User Management, and audit logging.
+2. Inventory Service: Product catalog, batch tracking, stock ledger, transfers/replenishments.
+3. Billing Service: Point-of-Sale billing, prescription handling, payment integration.
+4. Reporting Service: Business Intelligence endpoints aggregating data for the BI UI dashboard.
+5. AI Service: Deep AI integration using Python LLM wrappers (Groq/Llama-3) and machine learning models for anomaly detection and forecasting.
+
+2. DATA MODEL & SERVICE ISOLATION
+--------------------------------------------------------------------
+To ensure horizontal scalability and fault isolation, the application utilizes the "Database-per-Service" pattern:
+
+- pharma_auth_db: `users`, `roles`, `auth_audit_log`
+- pharma_inventory_db: `products`, `categories`, `batches`, `stock_ledger`, `replenishment_requests`
+- pharma_billing_db: `sales_orders`, `sales_order_items`, `payment_transactions`, `prescriptions`
+
+Where cross-schema aggregations are required, data is synchronized to a unified reporting interface or utilizing intelligent query routing in the AI service, rather than introducing runtime tight coupling.
+
+3. SECURITY MODEL & ROLE-BASED ACCESS CONTROL (RBAC)
+--------------------------------------------------------------------
+Security is paramount, built around a Zero-Trust architecture principle.
+- Authentication: Secure, stateless, short-lived JSON Web Tokens (RS256 signed).
+- Authorization: Granular permissions matrix.
+  * Head Office Admin: System-wide read/write, global KPI access, user provisioning.
+  * Branch Manager: Localized branch-specific operations, branch reporting, inventory adjustments.
+  * Counter Staff: Restricted to daily POS sales transactions and product lookups.
+- Auditability: PGCrypto hash functions applied for sensitive data. Activity logs generated dynamically over API gateway interactions recording timestamp, user context, and action types.
+
+4. AGENTIC AI CAPABILITIES & COMPLIANCE GUARDRAILS
+--------------------------------------------------------------------
+The platform integrates "Agentic AI" not just as an afterthought but as an active operational aid:
+
+A. Conversational Search (Text-to-SQL):
+- Users can query the platform via text ("Show me branches with lowest revenue this week").
+- The AI Service utilizes Groq Llama-3 to generate complex PostgreSQL analytics.
+- COMPLIANCE GUARDRAIL: Strict regex-based safety parsing drops any non-SELECT queries. Queries to PII columns (customer_phone, user_passwords) are strictly blocked. Hard-coded row LIMITs enforce safe resource distribution.
+
+B. Anomaly Detection (Rule-Based & Statistical Sweeps):
+- Celery beat workers analyze the `sales_orders` and `stock_ledger` tables independently in horizontal background threads. Suspicious actions (e.g. bulk deletions, high-value midnight sales) alert the AI Console UI instantly.
+
+C. Demand Forecasting:
+- 30-day statistical demand forecasting factoring moving averages against historic sales from the Billing database, automatically matching localized branch inventory data, warning administrators when to initiate Replenishment Requests before physical stock outages occur.
+
+5. NON-FUNCTIONAL CONSIDERATIONS
+--------------------------------------------------------------------
+- Scalability: The stateless API limits RAM bloat. The Docker Swarm / K8s layer allows auto-scaling of specific microservices based on traffic (e.g., Billing Service scales independently during peak hours).
+- Performance & Low-Bandwidth: The frontend strictly avoids heavy monolithic UI libraries. Lazy loading of components and aggressive GZIP API responses ensure operations run smoothly even on 3G rural mobile networks.
+- Observability: Prometheus scrape endpoints are exposed across all services, hooked into Grafana dashboards. Error telemetry provides real-time infrastructure tracking. 
+
+6. PHASED ROLLOUT IMPLEMENTATION PLAN
+--------------------------------------------------------------------
+Phase 1 (Month 1): Minimum Viable Product (MVP) core microservices (Auth, Inventory) developed and deployed to a staging environment for User Acceptance Testing (UAT).
+Phase 2 (Month 2): Billing Service integration, RBAC configurations, and AI Anomaly integration.
+Phase 3 (Month 3 - Pilot Rollout): Deploy the system to the first 50 pilot stores. Dedicated on-site monitoring and edge-case fixing for infrastructure latency.
+Phase 4 (Month 4 - Scaling Phase): Gradual expansion from 50 to 180 stores with dynamic Kubernetes horizontal scaling rules activated for 1,200 concurrent target users. AI Demand forecasting activates utilizing historical baseline accumulated from the pilot stores.

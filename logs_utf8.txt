@@ -1,0 +1,97 @@
+﻿pharma_frontend  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+pharma_frontend  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+pharma_frontend  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+pharma_frontend  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+pharma_frontend  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+pharma_frontend  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+pharma_frontend  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+pharma_frontend  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+pharma_frontend  | /docker-entrypoint.sh: Configuration complete; ready for start up
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: using the "epoll" event method
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: nginx/1.29.7
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker processes
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 28
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 29
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 30
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 31
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 32
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 33
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 34
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 35
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 36
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 37
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 38
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 39
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 40
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 41
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 42
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 43
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 44
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 45
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 46
+pharma_frontend  | 2026/04/03 21:02:43 [notice] 1#1: start worker process 47
+pharma_gateway   | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+pharma_gateway   | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+pharma_gateway   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+pharma_gateway   | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+pharma_gateway   | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+pharma_gateway   | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+pharma_gateway   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+pharma_gateway   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+pharma_gateway   | /docker-entrypoint.sh: Configuration complete; ready for start up
+pharma_gateway   | 2026/04/03 20:36:58 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:32
+pharma_gateway   | nginx: [warn] the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:32
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:22 +0000] "GET / HTTP/1.1" 301 169 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET / HTTP/2.0" 200 566 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /assets/index-xLri5kyn.js HTTP/2.0" 200 31599 "https://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /assets/state-BCOWwlK5.js HTTP/2.0" 200 10350 "https://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /assets/index-DSZJbTME.css HTTP/2.0" 200 3159 "https://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /assets/vendor-BrRhmBBA.js HTTP/2.0" 200 52296 "https://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /assets/charts-Da9029TF.js HTTP/2.0" 200 110621 "https://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:26 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:37 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:45 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/inventory" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:54 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:40:59 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/billing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:41:42 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /prescriptions HTTP/2.0" 200 566 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /assets/index-xLri5kyn.js HTTP/2.0" 304 0 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /assets/vendor-BrRhmBBA.js HTTP/2.0" 304 0 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /assets/index-DSZJbTME.css HTTP/2.0" 304 0 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /assets/state-BCOWwlK5.js HTTP/2.0" 304 0 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /assets/charts-Da9029TF.js HTTP/2.0" 304 0 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:00 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:04 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:19 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/inventory" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:21 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/billing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:22 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/replenishment" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:23 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/prescriptions" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:25 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/replenishment" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:26 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/reports" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:38 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/ai" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:48 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:51 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/audit" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:20:59:54 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:00:11 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:01:04 +0000] "GET /dashboard HTTP/2.0" 200 566 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:01:04 +0000] "GET /favicon.svg HTTP/2.0" 200 566 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:29 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /dashboard HTTP/2.0", upstream: "http://172.18.0.10:80/dashboard", host: "localhost"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:29 +0000] "GET /dashboard HTTP/2.0" 502 559 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:29 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /favicon.ico HTTP/2.0", upstream: "http://172.18.0.10:80/favicon.ico", host: "localhost", referrer: "https://localhost/dashboard"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:29 +0000] "GET /favicon.ico HTTP/2.0" 502 559 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:31 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /dashboard HTTP/2.0", upstream: "http://172.18.0.10:80/dashboard", host: "localhost"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:31 +0000] "GET /dashboard HTTP/2.0" 502 559 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:31 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /favicon.ico HTTP/2.0", upstream: "http://172.18.0.10:80/favicon.ico", host: "localhost", referrer: "https://localhost/dashboard"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:31 +0000] "GET /favicon.ico HTTP/2.0" 502 559 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:53 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /dashboard HTTP/2.0", upstream: "http://172.18.0.10:80/dashboard", host: "localhost"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:53 +0000] "GET /dashboard HTTP/2.0" 502 559 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:53 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /favicon.ico HTTP/2.0", upstream: "http://172.18.0.10:80/favicon.ico", host: "localhost", referrer: "https://localhost/dashboard"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:53 +0000] "GET /favicon.ico HTTP/2.0" 502 559 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:54 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /dashboard HTTP/2.0", upstream: "http://172.18.0.10:80/dashboard", host: "localhost"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:54 +0000] "GET /dashboard HTTP/2.0" 502 559 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+pharma_gateway   | 2026/04/03 21:04:54 [error] 30#30: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /favicon.ico HTTP/2.0", upstream: "http://172.18.0.10:80/favicon.ico", host: "localhost", referrer: "https://localhost/dashboard"
+pharma_gateway   | 172.18.0.1 - - [03/Apr/2026:21:04:54 +0000] "GET /favicon.ico HTTP/2.0" 502 559 "https://localhost/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
