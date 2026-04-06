@@ -49,7 +49,7 @@ PharmaCentral is a production-grade, microservices-based **Omni-Channel Pharmacy
 
 ## Key Features
 
-### 🔐 Security & Access Control
+### Security & Access Control
 - JWT (RS256) authentication with automatic token refresh
 - TOTP-based Multi-Factor Authentication (Google Authenticator / Authy)
 - Role-Based Access Control: **Head Admin · Branch Manager · Counter Staff**
